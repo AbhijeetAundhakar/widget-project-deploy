@@ -1,0 +1,62 @@
+.widget {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        color: var(--text-color);
+
+
+
+
+    /* background: #fff; */
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.25rem;
+    position: relative;
+    transition: var(--transition);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid var(--primary-light);
+}
+
+.widget h3 {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.widgetContent {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.widgetContent p {
+    margin: 0.5rem 0;
+    padding: 0.25rem 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.removeBtn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: var(--danger);
+    color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.graphContainer {
+    flex-grow: 1;
+    min-height: 250px;
+    position: relative;
+}

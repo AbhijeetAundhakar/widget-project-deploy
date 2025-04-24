@@ -1,0 +1,382 @@
+/* .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.modal p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.tab {
+    padding: 8px 15px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+}
+
+.tab.active {
+    border-bottom-color: #007bff;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.widgetList {
+    margin-bottom: 20px;
+}
+
+.widgetItem {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.widgetItem input {
+    margin-right: 10px;
+}
+
+.addNewBtn {
+    background: #f0f0f0;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.addNewBtn:hover {
+    background: #e0e0e0;
+}
+
+.newWidgetForm {
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancelBtn {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #555;
+}
+
+.confirmBtn {
+    background: #007bff;
+    border: 1px solid #007bff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.confirmBtn:disabled {
+    background: #cccccc;
+    border-color: #cccccc;
+    cursor: not-allowed;
+}
+
+ */
+
+
+
+
+
+ .modalOverlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+     backdrop-filter: blur(3px);
+ }
+
+ .modal {
+     background: #fff;
+     border-radius: 12px;
+     padding: 2rem;
+     width: 500px;
+     max-width: 90vw;
+     max-height: 90vh;
+     overflow-y: auto;
+     position: relative;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+ }
+
+ .closeButton {
+     position: absolute;
+     top: 1rem;
+     right: 1rem;
+     background: none;
+     border: none;
+     cursor: pointer;
+     color: #666;
+     transition: all 0.2s ease;
+ }
+
+ .closeButton:hover {
+     color: #333;
+     transform: rotate(90deg);
+ }
+
+ .modalHeader {
+     margin-bottom: 1.5rem;
+ }
+
+ .modalHeader h2 {
+     font-size: 1.5rem;
+     color: #2d3748;
+     margin-bottom: 0.5rem;
+ }
+
+ .modalHeader p {
+     color: #718096;
+     font-size: 0.9rem;
+ }
+
+ .tabs {
+     display: flex;
+     gap: 0.5rem;
+     margin-bottom: 1.5rem;
+     flex-wrap: wrap;
+ }
+
+ .tab {
+     padding: 0.5rem 1rem;
+     background: #edf2f7;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     font-size: 0.8rem;
+     font-weight: 600;
+     color: #4a5568;
+     transition: all 0.2s ease;
+ }
+
+ .tab.active {
+     background: #4299e1;
+     color: white;
+ }
+
+ .widgetList {
+     margin-bottom: 1.5rem;
+     max-height: 300px;
+     overflow-y: auto;
+     padding-right: 0.5rem;
+ }
+
+ .widgetItem {
+     display: flex;
+     align-items: center;
+     padding: 0.75rem;
+     border-radius: 6px;
+     margin-bottom: 0.5rem;
+     background: #f7fafc;
+     transition: all 0.2s ease;
+ }
+
+ .widgetItem:hover {
+     background: #ebf8ff;
+ }
+
+ .widgetItem input {
+     margin-right: 0.75rem;
+     accent-color: #4299e1;
+ }
+
+ .widgetItem label {
+     display: flex;
+     flex-direction: column;
+     cursor: pointer;
+ }
+
+ .widgetName {
+     font-weight: 500;
+     color: #2d3748;
+ }
+
+ .widgetType {
+     font-size: 0.7rem;
+     color: #718096;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+     margin-top: 0.2rem;
+ }
+
+ .emptyState {
+     text-align: center;
+     padding: 1.5rem;
+     color: #a0aec0;
+     font-style: italic;
+ }
+
+ .addNewBtn {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.5rem;
+     width: 100%;
+     padding: 0.75rem;
+     background: #e6fffa;
+     color: #319795;
+     border: 1px dashed #81e6d9;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 500;
+     margin-bottom: 1.5rem;
+     transition: all 0.2s ease;
+ }
+
+ .addNewBtn:hover {
+     background: #b2f5ea;
+ }
+
+ .newWidgetForm {
+     margin-bottom: 1.5rem;
+ }
+
+ .formGroup {
+     margin-bottom: 1rem;
+ }
+
+ .formGroup label {
+     display: block;
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+     color: #4a5568;
+ }
+
+ .formInput,
+ .formTextarea {
+     width: 100%;
+     padding: 0.75rem;
+     border: 1px solid #e2e8f0;
+     border-radius: 6px;
+     font-size: 0.9rem;
+     transition: all 0.2s ease;
+ }
+
+ .formInput:focus,
+ .formTextarea:focus {
+     outline: none;
+     border-color: #4299e1;
+     box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+ }
+
+ .formTextarea {
+     min-height: 100px;
+     resize: vertical;
+ }
+
+ .modalActions {
+     display: flex;
+     justify-content: flex-end;
+     gap: 0.75rem;
+ }
+
+ .cancelBtn {
+     padding: 0.75rem 1.5rem;
+     background: #fff;
+     border: 1px solid #e2e8f0;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 500;
+     color: #4a5568;
+     transition: all 0.2s ease;
+ }
+
+ .cancelBtn:hover {
+     background: #f7fafc;
+     border-color: #cbd5e0;
+ }
+
+ .confirmBtn {
+     padding: 0.75rem 1.5rem;
+     background: #4299e1;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 500;
+     color: white;
+     transition: all 0.2s ease;
+ }
+
+ .confirmBtn:hover {
+     background: #3182ce;
+ }
+
+ .confirmBtn:disabled {
+     background: #a0aec0;
+     cursor: not-allowed;
+ }

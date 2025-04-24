@@ -1,0 +1,60 @@
+.category {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    border-left: 4px solid var(--primary);
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+.categoryHeader h2 {
+    font-size: 1.25rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin: 0;
+}
+
+.addWidgetBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.addWidgetBtn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.addWidgetBtn:active {
+    transform: translateY(0);
+}
+
+.widgetsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
